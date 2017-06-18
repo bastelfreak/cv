@@ -1,0 +1,102 @@
+\ProvidesPackage{bastelfreak}
+%\RequirePackage[pdftex]{hyperref}
+\RequirePackage{metalogo}
+
+% moderncv themes
+\moderncvtheme[orange]{classic} % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{casual}   % idem
+
+% character encoding
+%\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+
+\usepackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\ifxetexorluatex
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\newfontfamily{\githubfont}{Octicons}
+\newfontfamily{\xingfont}{Myriad Pro}
+\else
+\newcommand\githubfont{}
+\newcommand\xingfont{}
+\fi
+
+\usepackage{microtype}
+
+\newcommand\octocat{{\githubfont\char"F209}}
+\newcommand\xing{%
+\scalebox{0.7}{%
+\begin{tikzpicture}[baseline]%
+\node[fill=color2,rounded corners=2pt,anchor=base] {%
+\xingfont\bfseries\upshape\color{white}{X}%
+};%
+\end{tikzpicture}}}
+
+% personal data
+\firstname{Tim}
+\familyname{Meusel}
+\address{Sportplatzstraße 93}{51147 Köln}
+\mobile{+49 (0) 163 7015493}
+%\phone{}
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{tim@bastelfreak.de}
+%\homepage{www.bastelfreak.de}
+%\extrainfo{\octocat~\url{http://github.com/bastelfreak}}
+%\photo[64pt]{identity}
+
+
+\AtBeginDocument{\renewcommand{\labelitemi}{-- }}
+
+\usepackage[firstyear=1999,lastyear=2017]{moderntimeline}
+%\tlmaxdates{1999}{2012}
+\tlwidth{0.8ex}
+
+
+% Proper alignment
+\usepackage[originalcommands]{ragged2e}
+\renewcommand*{\cvcomputer}[4]{%
+  \cvdoubleitem{#1}{\small\raggedright#2}{#3}{\small\raggedright#4}}
+
+% Not all fonts have an sl shape
+\renewcommand*{\cventry}[6]{%
+  \cvline{#1}{%
+    {\bfseries#2}%
+    \ifx#3\else{, {\itshape#3}}\fi%
+    \ifx#4\else{, #4}\fi%
+    \ifx#5\else{, #5}\fi%
+    .%
+    \ifx#6\else{\newline{}\begin{minipage}[t]{\linewidth}\small#6\end{minipage}}\fi
+    }}%
+
+
+% Refine quote 
+\newcommand*{\myquote}[2]{%
+   \quote{\itshape #1 \\ \scshape \footnotesize #2}}
+
+% Hobbies
+\newcommand*{\cvhobby}[2]{\cvline{#1}{\small #2}}
+
+
+% Developer/Contributor footnotes
+\usepackage[bottom,norule,symbol*]{footmisc}
+\newcommand*{\devnotes}[2]{%
+\vfill
+\footnotetext[1]{#1}
+\footnotetext[2]{#2}
+}
+
+\newcommand*{\maintainer}{\footnotemark[1]}
+\newcommand*{\contributor}{\footnotemark[2]}

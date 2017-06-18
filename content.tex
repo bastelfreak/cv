@@ -1,0 +1,234 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% Version: 20110122-4
+
+
+\documentclass[11pt,a4paper,nolmodern]{moderncv}
+
+\usepackage{bastelfreak}
+\usepackage{fontspec}
+\usepackage[english]{babel}
+\linespread{0.9}
+% for some reason, lines take up a lot of space in itemize in English...
+\newenvironment{tightitemize}
+   {\begin{itemize}
+   \setlength{\parskip}{0pt}}
+   {\end{itemize}}
+
+
+% personal data
+\title{DevOps Engineer}
+\extrainfo{%
+\xing~\httplink{https://www.xing.com/profile/Tim\_Meusel}\\%
+\octocat~\httplink{https://www.github.com/bastelfreak}\\%
+Driving License} % optional, remove the line if not wanted
+
+\myquote{DevOps is all about empathy}{Rob Nelson}
+
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\setmainfont{TeX Gyre Pagella}
+%\setsansfont{Myriad Pro}
+
+\hyphenpenalty=10000
+\maketitle
+
+\section{Skills}
+
+\subsection{Expert Skills}
+\cvcomputer{Configuration Management}{Puppet\maintainer, installimage\maintainer}
+           {Operating Systems}{Archlinux\contributor, Gentoo}
+
+\subsection{Development}
+\cvcomputer{Languages}{C\#, Python, Shell/Bash, Ruby}
+           {Frameworks}{RSpec, Beaker, Sinatra, Rails}
+\cvcomputer{Databases}{MySQL, PostgreSQL}
+           {Methods}{Object Oriented Programming, MVC, Unit Tests, UML}
+\cvcomputer{Source Management}{Git, SVN}
+           {Tools}{Bitbucket, GitHub, Travis CI, Jenkins}
+
+\subsection{Systems and Networks Administration}
+\cvcomputer{Web}{Apache, Lighttpd, Nginx, Varnish, Squid, proftpd, HAProxy}
+           {Monitoring}{ELK-Stack, Zabbix, Munin, Prometheus, Graphite, Grafana, Graylog}
+\cvcomputer{Mail}{Postfix, Dovecot, Amavis}
+           {Backup}{Duply, Borg}
+\cvcomputer{Installation / Deployment}{Kickstart, Puppet\maintainer, installimage\maintainer}
+           {Infrastructure Software}{ISC-DHCPd, OpenVPN, hpa-tftpd, NFS, Marmoset, OpenLDAP}
+\cvcomputer{Operating Systems}{GNU/Linux (Debian, Ubuntu, RedHat, Archlinux\contributor, Gentoo),
+                               FreeBSD, pfSense}
+           {Databases}{MySQL, PostgreSQL}
+\cvcomputer{Virtualization}{VMWare, Docker, QEMU/KVM, Parallels Cloud Server}
+           {Security}{SSL, PGP/GnuPG, OpenSSH}
+\cvcomputer{DNS}{Unbound, Bind, Dnsmasq, PowerDNS}
+           {Networking}{Cisco routing and switching, VLANs, Network design, IPv6, Network security}
+\devnotes{Maintainer}{Contributor}
+
+\newpage
+\section{Experience}
+\subsection{IT Experience}
+
+% Center labels and use "Since"
+%\tltextstart[base]{\scriptsize}
+%\tltextend[base]{\scriptsize}
+%\tlsince{Since~}
+
+\tlcventry{2014}{8}{DevOps Engineer}{\href{https://www.heg.com/}{Hosteurope GmbH} then GoGaddy EMEA}{}{}%
+  {DevOps Engineer, System Administrator
+\begin{itemize}
+  \item DevOps Engineer:
+    \begin{itemize}
+      \item Operated a fleet of 2600+ Puppet-operated servers;
+      \item Architectured and deployed a scaleable ELK-Stack with Graylog;
+      \item Planned and executed migrations from Puppet version 3 to 4;
+      \item Wrote and contributed to 100+ Puppet modules (mostly public), including plugins (facts, functions, types \& providers, indirectors), with unit- and acceptance tests;
+      \item Designed and built a technical fabric to provision physical servers for multiple brands;
+      \item Packaged software for Archlinux. Operated and improved the package build systems and package repositories;
+    \end{itemize}
+  \item System Administrator
+    \begin{itemize}
+      \item Operate multiple Cloud platforms with more than 3300 nodes. Provide third level support;
+      \item Test and evaluate new hardware;
+      \item Enhance the hardwaremonitoring to predict disk failures;
+      \item Automate and optimize the consolidation of legacy platforms;
+    \end{itemize}
+\end{itemize}}
+
+\tlcventry{2012}{2014}{Systems Engineer}{\href{https://hetzner.de/}{Hetzner Online AG}}{}{}{
+\begin{tightitemize}
+ \item Rebuild of a Puppet infrastructure for 1500+ servers;
+ \item Renewal and industrialization of the software deployment system for Debian/Ubuntu;
+ \item Management of the Gforge (collaborative development web interface) platform;
+ \item Development of QA tools for systems and configurations policy compliance;
+ \item Integration of the continuous integration platform (Hudson) with the Debian/Ubuntu software deployment system;
+ \item Monitoring of the fleet of servers;
+ \item Writing of technical documentation.
+\end{tightitemize}}
+
+\tlcventry{2008}{0}{Developer}{\href{http://www.augeas.net}{Augeas}}{Internet}{}{Development, bugfix and documentation
+\begin{tightitemize}%
+ \item Writing of Augeas lenses;
+ \item Coding in C;
+ \item Improvement of autotools configuration;
+ \item NaturalDocs Integration (documentation generator);
+ \item International Conference Speaker (Belgium (\href{http://archive.fosdem.org/2009/schedule/events/fedora_augeas}{FOSDEM})).
+\end{tightitemize}}
+
+\tlcventry{2005}{0}{\href{https://launchpad.net/~raphink}{Developer/Maintainer}}{\href{http://www.ubuntu.com}{Ubuntu}}{Internet}{}{Development, bugfix and documentation
+\begin{tightitemize}%
+ \item Creation, maintenance and review of software packages;
+ \item Writing of technical documentation for developers;
+ \item Maintenance of the QA system for software package;
+ \item Bug management;
+ \item International Conference Speaker (Hungary, Germany (\href{http://www.linuxtag.org/}{LinuxTag})).
+\end{tightitemize}}
+
+
+\tlcventry{2005}{0}{Open-Source Contributor}{Various projects}{Internet}{}{%
+\begin{tightitemize}%
+ %\item \href{https://launchpad.net/wavebiblebot}{Flammard Bible Bot}: Google Wave Bot, a personal project written in Python/AppEngine;
+ %\item \href{http://www.ichthux.com}{Ichthux}: Creation and maintenance of a specialized Linux distribution based on Ubuntu;
+ %\item \href{https://launchpad.net/byobu}{Byobu}: contribution of scripts and patches in Python and Bash;
+ \item \href{http://search.cpan.org/~raphink}{CPAN Author}: maintainer of several Perl modules on CPAN;
+ \item \href{http://www.ctan.org/author/id/pinson}{CTAN Author}: maintainer of several \LaTeX{} packages on CTAN.
+\end{tightitemize}}
+
+
+\subsection{Other Experience}
+
+\tlcventry{2009}{0}{Translator and Editor}{La Colombe Calvary}{Nice}{}{%
+\begin{tightitemize}%
+ \item Translation of English theology books into French;
+ \item Edition of books using \LaTeX{}, \XeTeX{} and \LuaTeX{};
+ \item Publishing of books using on-demand publishing services (CreateSpace and Lulu).
+\end{tightitemize}}
+
+% Restore normal labels
+%\tltext{\scriptsize}
+
+%\tldatelabelcventry{2004}{July 2004}{Blue Collar Internship}{\href{http://www.snecma.com}{SNECMA}}{Moissy-Cramayel}{}{Assembled and equilibrated turbo reactors for planes}
+
+%\tldatelabelcventry{2002}{Summer 2002}{Fire Safety Officer}{\href{http://www.euroguard.fr/}{Euroguard}}{Marcoussis}{}{Supervised an Alcatel research site}
+
+%\tldatelabelcventry{2001}{Summer 2001}{Surveillance Agent}{Penauille Polys\'ecurit\'e}{Paris}{}{Supervised the headquarters of the French Red Cross}
+
+%\tllabelcventry{1999}{2000}{1999--2000}{Certified First Responder}{\href{http://www.croix-rouge.fr/}{French Red Cross}}{Paris Suburbs}{}{Served in several volunteer missions as a paramedic}
+
+
+\pagebreak
+
+\section{Education}
+
+\tldatecventry{2013}{Puppet Trainer}{\href{https://puppetlabs.com/services/puppet-training/}{PuppetLabs}}{Amsterdam}{}{Official Training Partner for PuppetLabs' courses (Puppet Fundamentals, Puppet Advanced, Extending Puppet with Ruby)}
+
+\tldatecventry{2009}{ITIL{\LARGE\textregistered} v3 Foundation}{\href{http://www.itil-officialsite.com/home/home.asp}{EXIN}}{Sophia Antipolis}{}{Organization and efficiency of the Information System}
+
+\tldatecventry{2005}{Student in Business Creation and Management}{\href{http://www.creation-transmission.com/}{Cr\'eafort}}{Poitiers}{}{Accounting, Management, Marketing, Law}
+
+\tldatecventry{2005}{Student in Pedagogy (`Gestion Mentale')}{\href{http://www.ifgm.org/}{IFGM}}{Bordeaux}{}{Pedagogy, Didacticism, Cognitive Psychology}
+
+\tllabelcventry{2003}{2005}{2003--2005}{Student in Mechanical Engineering}{\newline\href{http://www.ensma.fr}{\'Ecole Nationale Sup\'erieure de M\'ecanique et d'A\'erotechnique (ENSMA)}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
+
+\tldatecventry{2004}{Licence, equivalent of a British Bsc, in Mechanics}{\href{http://www.univ-poitiers.fr/}{Universit\'e de Poitiers}}{Poitiers}{}{Solid \& Fluid Mechanics, Mathematics, Combusion \& Propulsion, Materials Science, Automation, Signal Processing, Computer Sciences, Management}
+
+\tllabelcventry{2002}{2003}{2002--2003}{Student in Chemistry}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Chemistry, Physics, Mathematics}
+
+\tllabelcventry{2000}{2002}{2000-2002}{Student in Medicine (PCEM1)}{\href{http://www.u-psud.fr}{Universit\'e de Paris XI}}{Orsay}{}{Biology, Chemistry, Biochemistry, Physics, Anatomy, Histology, Physiology, Law}
+
+\tldatecventry{2000}{Baccalaur\'eat, equivalent of British A Level}{\href{http://www.ac-versailles.fr/etabliss/orsay/}{Lyc\'ee Blaise Pascal}}{Orsay}{with distinction `mention bien'}{}
+
+
+
+\section{Certifications}
+
+\tldatecventry{2013}{Puppet Certified Developer}{\href{https://puppetlabs.com/services/certification/puppet-developer/}{PuppetLabs}}{PCD0000011}{}{Puppet IT automation software}
+
+\tldatecventry{2013}{Puppet Certified Professional}{\href{https://puppetlabs.com/services/certification/puppet-professional/}{PuppetLabs}}{PCP0000116}{}{Puppet IT automation software}
+
+\tldatecventry{2009}{ITIL{\LARGE\textregistered} v3 Foundation Examination}{\href{http://www.itil-officialsite.com/home/home.asp}{EXIN}}{00055512}{}{Organization and efficiency of the Information System}
+
+
+\section{Foreign Languages}
+\cvlanguage{French}{Native}{Mother Tongue}
+\cvlanguage{English}{Fluent}{Daily practice, conferences given in English}
+\cvlanguage{Spanish}{Good Level}{Occasional practice}
+\cvlanguage{German}{Good Level}{Studied 9 years in school}
+%\cvlanguage{Russian}{Intermediary Level}{Studied 3 years in school}
+%\cvlanguage{Dutch}{Beginner}{Studied alone}
+%\cvlanguage{Swedish}{Beginner}{Studied alone}
+
+\section{Personal interests}
+
+\cvhobby{Music}{Clarinet, piano, organ, saxophone}
+\cvhobby{Sports}{Hiking, sailing, golf, climbing}
+\cvhobby{Contributions}{Wikipedia, OpenStreetMap}
+\cvhobby{Memberships}{President of the cultural association `la Colombe de Savoie'}
+\cvhobby{}{Ubuntu member}
+\cvhobby{Others}{Travels, reading}
+
+%\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}   % 'publications' is the name of a BibTeX file
+
+\end{document}
