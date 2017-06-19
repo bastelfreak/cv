@@ -1,0 +1,41 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% Version: 20110122-4
+
+
+\documentclass[11pt,a4paper,nolmodern]{moderncv}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{bastelfreak}
+\usepackage{fontspec}
+\usepackage[english]{babel}
+\linespread{1.18}
+% for some reason, lines take up a lot of space in itemize in English...
+\newenvironment{tightitemize}
+   {\begin{itemize}
+   \setlength{\parskip}{0pt}}
+   {\end{itemize}}
+
+
+% personal data
+\title{DevOps Engineer}
+\extrainfo{%
+\xing~\httplink{xing.com/profile/Tim\_Meusel}\\%
+\faGithub~\httplink{github.com/bastelfreak}\\%
+\faCar~Driving License} % optional, remove the line if not wanted
+
+\myquote{DevOps is all about empathy}{Rob Nelson}
+
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\begin{document}
+\setmainfont{TeX Gyre Pagella}
+%\setsansfont{Myriad Pro}
+
+\hyphenpenalty=10000
+\maketitle
+
