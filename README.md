@@ -9,5 +9,6 @@ pacman -Syu texlive-bin ttf-octicons texlive-fontsextra
 Build the document:
 
 ```
-latexmk -lualatex -pdf content-en.tex
+latexmk -pdf -lualatex content-en.tex
+latexmk -pdf -lualatex content-de.tex
 ```
