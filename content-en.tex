@@ -2,7 +2,7 @@
 
 \documentclass[11pt,a4paper,nolmodern]{moderncv}
 
-\title{DevOps Engineer}
+\title{Senior IT Automation Consultant}
 
 \usepackage{bastelfreak}
 
@@ -21,13 +21,13 @@
 \subsection{Development}
 \cvcomputer{Languages}{C\#, Python, Shell/Bash, Ruby}
            {Frameworks}{RSpec, Beaker\maintainer\contributor, Sinatra, Rails}
-\cvcomputer{Databases}{MySQL, PostgreSQL}
+\cvcomputer{Databases}{MySQL, PostgreSQL, Vault/Consul}
            {Methods}{Object Oriented Programming, MVC, Unit Tests, UML}
 \cvcomputer{Source Management}{Git, SVN}
-           {Tools}{Bitbucket, GitHub, GitHub Actions, Travis CI, Jenkins}
+           {Tools}{GitHub, GitHub Actions, Travis CI, Jenkins}
 
 \subsection{Systems and Networks Administration}
-\cvcomputer{Web}{Apache, Lighttpd, Nginx, Varnish, Squid, proftpd, HAProxy}
+\cvcomputer{Web}{Apache, Nginx, Varnish, Squid, proftpd, HAProxy}
            {Monitoring}{ELK-Stack, Zabbix, Munin, Prometheus, Graphite, Grafana, Graylog, Collectd}
 \cvcomputer{Mail}{Postfix, Dovecot, Amavis}
            {Backup}{Duply, Borg}
@@ -46,28 +46,29 @@
 
 \section{Experience}
 
-\tlcventry{2014}{0}{DevOps Engineer}{\href{https://www.heg.com/}{Hosteurope GmbH} (acquired by GoDaddy EMEA)}{Cologne}{}%
+\tlcventry{2021}{0}{Senior IT Automation Consultant}{\href{https://example42.com/}{example42 GmbH}}{Cologne}{}{%
+\begin{tightitemize}
+  \item IT automation consulting for operating systems and applications;
+  \item Develop custom Puppet modules to suit customers needs;
+  \item Setup and review IT automation infrastructure;
+\end{tightitemize}}
+
+\tlcventry{2014}{2021}{DevOps Engineer}{\href{https://www.heg.com/}{Hosteurope GmbH} (acquired by GoDaddy EMEA)}{Cologne}{}%
   {DevOps Engineer, System Administrator
-\begin{itemize}
-  \item DevOps Engineer:
-    \begin{itemize}
-      \item Architected and deployed a scaleable ELK-Stack with Graylog;
-      \item Planned and executed migrations from Puppet versions 3 to 4 to 5 to 6;
-      \item Wrote and contributed to 180+ public Puppet modules, (includes facts, types \& providers, unit and acceptance tests);
-      \item Designed and built a technical fabric to provision physical servers on premise and in the cloud for multiple brands;
-      \item Planned a cloud platform with Qemu and Kubernetes, including a scaleable network;
-      \item Provided self services for developers with Puppet (Consul, Vault, Kafka, Databases, Firewalling, Monitoring);
-      \item Mentored students for their Bachelor and Master thesis;
-      \item Product Owner for multiple infrastructure services.
-    \end{itemize}
-  \item System Administrator:
-    \begin{itemize}
-      \item Operated multiple Puppet-managed Cloud platforms with more than 3300 nodes;
-      \item Tested and evaluated new hardware regarding power consumption, efficiency and cloud instance density;
-      \item Enhanced the hardware monitoring to predict disk failures;
-      \item Automated and optimized the consolidation of legacy platforms.
-    \end{itemize}
-\end{itemize}}
+\begin{tightitemize}
+  \item Architected and deployed a scaleable ELK-Stack with Graylog;
+  \item Planned and executed migrations from Puppet versions 3 to 4 to 5 to 6;
+  \item Wrote and contributed to 180+ public Puppet modules;
+  \item Designed and built a technical fabric to provision physical servers on premise and in the cloud for multiple brands;
+  \item Planned a cloud platform with Qemu and Kubernetes, including a scaleable network;
+  \item Provided self services for developers with Puppet (e.g. Consul, Vault, pgsql, Firewalling);
+  \item Mentored students for their Bachelor and Master thesis;
+  \item Product Owner for multiple infrastructure services.
+  \item Operated multiple Puppet-managed Cloud platforms with more than 3300 nodes;
+  \item Tested and evaluated new hardware to increase cloud instance density;
+  \item Enhanced the hardware monitoring to predict disk failures;
+  \item Automated and optimized the consolidation of legacy platforms.
+\end{tightitemize}}
 
 \tlcventry{2012}{2014}{Systems Engineer}{\href{https://hetzner.de/}{Hetzner Online AG}}{Falkenstein}{}{Led a cloud platform, maintained datacenter infrastructure
 \begin{tightitemize}
