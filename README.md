@@ -8,7 +8,7 @@ file, the English version in [content-en.pdf](https://github.com/bastelfreak/cv/
 You need a few archlinux packages to build it:
 
 ```bash
-pacman -Syu texlive-bin ttf-octicons texlive-fontsextra ttf-font-awesome-4
+pacman -Syu texlive-bin texlive-binextra texlive-luatex texlive-fontsextra ttf-octicons ttf-font-awesome-4
 ```
 
 Build the document:
