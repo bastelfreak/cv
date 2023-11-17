@@ -23,5 +23,5 @@ Thanks to [Raphaël Pinson](https://raphink.info/) who wrote most of the Latex c
 
 As you can see in my CV, I'm involved in the Puppet ecosystem since several
 years. I offer Puppet consulting and development. Write to
-[tim@bastelfreak.de][mailto:tim@bastelfreak.de] for an inquiry if you're
+[tim@bastelfreak.de](mailto:tim@bastelfreak.de) for an inquiry if you're
 interested.
